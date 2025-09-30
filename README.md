@@ -1,35 +1,77 @@
 Audio Recognition for Gender and Age Group Classification
 
+This repository contains the code and results for an audio recognition project focused on classifying gender and age groups from audio samples using Machine Learning and Deep Learning techniques.
 
-This repository contains the code and results for an audio recognition project aimed at classifying gender and age groups based on audio features using Machine Learning techniques.
+🔎 Project Overview
+
+The project leverages audio feature extraction methods such as Mel-Frequency Cepstral Coefficients (MFCCs) and spectrograms to build robust classification models.
+The models are based on Long Short-Term Memory (LSTM) networks, trained on real audio data to perform:
+
+Gender Classification → Male / Female
+
+Age Group Classification →
+
+0 → Age 15 and under
+
+1 → Age 16–40
+
+2 → Age 41 and above
+
+✨ Key Features
+
+Audio Features: MFCCs, spectrograms, and augmentation strategies for robust training.
+
+Gender Classification: Classifies audio samples as Male or Female.
+
+Age Group Classification: Predicts one of the three defined age groups.
+
+Fallback Strategy: Handles ambiguous inputs gracefully to improve reliability.
+
+Data Augmentation: Pitch shifting and time stretching used to expand the dataset and reduce overfitting.
+
+📂 Repository Structure
+notebooks/
+├── final_model_mfcc40_augmented.ipynb          # 40 MFCCs + data augmentation (best results)
+├── baseline_mfcc13_with_fallback.ipynb # 13 MFCCs + fallback strategy + evaluation
+├── hyperparam_tuned_mfcc13.ipynb     # 13 MFCCs + optimized parameters
+└── experiments/                        # Scratch notebooks & earlier versions
+
+results/
+├── predictions.csv
+├── predictions_baseline.csv
+├── predictions_optimized.csv   
+
+And others for trial purposes.
+
+README.md
 
 
+Note: The LSTM models are trained directly in the notebooks. No pre-trained model files are included.
 
-Project Overview
+🚀 How It Works
 
+Feature Extraction → Extract MFCCs / spectrograms from raw audio using librosa.
 
-The project leverages various audio feature extraction techniques such as Mel-Frequency Cepstral Coefficients (MFCC) and spectrograms to classify gender and age groups. The model is built using Long Short-Term Memory (LSTM) networks, trained on audio data for both classification tasks.
+Preprocessing → Augment dataset with pitch shifting, time stretching; split into train/validation sets.
 
+Model Training → Train LSTM models with different input sizes (13 vs 40 MFCCs).
 
-Features:
+Evaluation → Use accuracy, confusion matrix, and CSV results for performance comparison.
 
+🛠️ Tech Stack
 
-Gender Classification: Classifies audio samples as either Male or Female.
+Python
 
+TensorFlow / Keras
 
-Age Group Classification: Classifies age into three groups: 0 for age 15 and under, 1 for age between 16 and 40, and 2 for age 41 and above.
+Librosa
 
+NumPy, Pandas, Matplotlib
 
-Audio Features: MFCC, spectrogram, and other LSTM techniques for feature extraction.
+📊 Results
 
+Best performance achieved using 40 MFCCs + augmentation (final_model_mfcc40_augmented.ipynb).
 
-Files in the Repository
+Smaller models (13 MFCCs) used for quick experiments and evaluation with fallback strategy.
 
-
-Test Notebooks (ipynb): Contains Jupyter Notebook files used for training and testing the model on the audio dataset.
-
-
-CSV Results: CSV files containing the results of the classification, including predictions and performance metrics.
-
-
-Model Files: LSTM-based models trained for both gender and age group classification.
+Robust accuracy across both gender and age group classification tasks.
