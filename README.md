@@ -29,17 +29,17 @@ Fallback Strategy: Handles ambiguous inputs gracefully to improve reliability
 
 Data Augmentation: Pitch shifting and time stretching used to expand the dataset and reduce overfitting
 
-📂 Repository Structure
-notebooks/
-├── final_model_mfcc40_augmented.ipynb          # 40 MFCCs + data augmentation (best results)
-├── baseline_mfcc13_with_fallback.ipynb        # 13 MFCCs + fallback strategy + evaluation
-├── hyperparam_tuned_mfcc13.ipynb              # 13 MFCCs + optimized parameters
-└── experiments/                               # Scratch notebooks & earlier versions
+📂 Repository Structure <br> <br>
+notebooks/ <br>
+├── final_model_mfcc40_augmented.ipynb          # 40 MFCCs + data augmentation (best results) <br>
+├── baseline_mfcc13_with_fallback.ipynb        # 13 MFCCs + fallback strategy + evaluation <br>
+├── hyperparam_tuned_mfcc13.ipynb              # 13 MFCCs + optimized parameters <br>
+└── experiments/                               # Scratch notebooks & earlier versions <br>
 
-results/
-├── predictions.csv
-├── predictions_baseline.csv
-├── predictions_optimized.csv   
+results/ <br>
+├── predictions.csv <br>
+├── predictions_baseline.csv <br>
+├── predictions_optimized.csv   <br>
 
 README.md
 requirements.txt
