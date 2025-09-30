@@ -19,44 +19,44 @@ Age Group Classification →
 
 ✨ Key Features
 
-Audio Features: MFCCs, spectrograms, and augmentation strategies for robust training.
+Audio Features: MFCCs, spectrograms, and augmentation strategies for robust training
 
-Gender Classification: Classifies audio samples as Male or Female.
+Gender Classification: Classifies audio samples as Male or Female
 
-Age Group Classification: Predicts one of the three defined age groups.
+Age Group Classification: Predicts one of the three defined age groups
 
-Fallback Strategy: Handles ambiguous inputs gracefully to improve reliability.
+Fallback Strategy: Handles ambiguous inputs gracefully to improve reliability
 
-Data Augmentation: Pitch shifting and time stretching used to expand the dataset and reduce overfitting.
+Data Augmentation: Pitch shifting and time stretching used to expand the dataset and reduce overfitting
 
 📂 Repository Structure
 notebooks/
 ├── final_model_mfcc40_augmented.ipynb          # 40 MFCCs + data augmentation (best results)
-├── baseline_mfcc13_with_fallback.ipynb # 13 MFCCs + fallback strategy + evaluation
-├── hyperparam_tuned_mfcc13.ipynb     # 13 MFCCs + optimized parameters
-└── experiments/                        # Scratch notebooks & earlier versions
+├── baseline_mfcc13_with_fallback.ipynb        # 13 MFCCs + fallback strategy + evaluation
+├── hyperparam_tuned_mfcc13.ipynb              # 13 MFCCs + optimized parameters
+└── experiments/                               # Scratch notebooks & earlier versions
 
 results/
 ├── predictions.csv
 ├── predictions_baseline.csv
 ├── predictions_optimized.csv   
 
-And others for trial purposes.
-
 README.md
+requirements.txt
 
 
 Note: The LSTM models are trained directly in the notebooks. No pre-trained model files are included.
+Other files in experiments/ are for trial purposes.
 
 🚀 How It Works
 
-Feature Extraction → Extract MFCCs / spectrograms from raw audio using librosa.
+Feature Extraction → Extract MFCCs / spectrograms from raw audio using librosa
 
-Preprocessing → Augment dataset with pitch shifting, time stretching; split into train/validation sets.
+Preprocessing → Augment dataset with pitch shifting, time stretching; split into train/validation sets
 
-Model Training → Train LSTM models with different input sizes (13 vs 40 MFCCs).
+Model Training → Train LSTM models with different input sizes (13 vs 40 MFCCs)
 
-Evaluation → Use accuracy, confusion matrix, and CSV results for performance comparison.
+Evaluation → Use accuracy, confusion matrix, and CSV results for performance comparison
 
 🛠️ Tech Stack
 
@@ -70,8 +70,8 @@ NumPy, Pandas, Matplotlib
 
 📊 Results
 
-Best performance achieved using 40 MFCCs + augmentation (final_model_mfcc40_augmented.ipynb).
+Best performance achieved using 40 MFCCs + augmentation (final_model_mfcc40_augmented.ipynb)
 
-Smaller models (13 MFCCs) used for quick experiments and evaluation with fallback strategy.
+Smaller models (13 MFCCs) used for quick experiments and evaluation with fallback strategy
 
-Robust accuracy across both gender and age group classification tasks.
+Robust accuracy across both gender and age group classification tasks
